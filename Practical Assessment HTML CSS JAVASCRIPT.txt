@@ -1,0 +1,27 @@
+	Assessment Based on HTML ,CSS ,Javascript,NOde js
+
+
+1] Accept the user sign up details from the html page and display all the details in tabular format using javascript
+
+2] Design a page with some products along with price 
+   user should select some product along with quantity 
+   based on the selection of product and quantity 
+   display user total_amount
+   
+   if total is above 1000 apply 10% discount on final total
+
+3]  Accept user information from user including DateOfBirth 
+    with this information display user with his Age in year ,month, days
+
+4] Create a server code connecting with database MySql using mysql module 
+    Create a client side application to connect with server to perform operations like 
+    1] Create table
+    2] Insert data
+    3] Update data
+    4] Delete data
+    5] Display data 
+
+5] Create a clock with Hours,Minutes, Seconds and display on browser
+
+
+
