@@ -5,6 +5,8 @@ https://chatgpt.com/c/67f679d8-a0e8-8011-bfcb-15d1f451b216--sapiet interview
 
 https://chatgpt.com/share/67ffeaf3-3764-8011-bb64-245b40e3cb7c - city 
 https://chatgpt.com/c/67f21f21-b9e4-8011-a0e7-76d186921a6d ---city
+
+https://chatgpt.com/share/6822fd80-660c-8011-875a-eae82960d365 --- Event driven- Microervices 
 ===================================================================================================
 Sure, here’s the list:
 
@@ -646,7 +648,7 @@ public class PageController {
         return "home";  // Returns view (home.jsp or home.html)
     }
 }
-------------------------------------------------
+--------------------------------------------------------------------------
     @GetMapping("/json")
     @ResponseBody
     public String jsonResponse() {
@@ -1134,8 +1136,11 @@ Add validation dependencies in pom.xml
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
+
 Add validation annotations in the model class.
+
 Example:
+
 import javax.validation.constraints.*;
 
 public class User {
@@ -2419,9 +2424,29 @@ It refers to the Primary Key or Unique Key in another table, which creates a rel
 6️⃣ Enable Compression – Use Gzip compression for API responses.
 7️⃣ Use Lazy Initialization – Load only required beans on startup (spring.main.lazy-initialization=true).
 8️⃣ Optimize Thread Pools – Configure executor pools for async tasks to prevent resource overuse.
+=============================================================================================================
+1. What is a Circuit Breaker in Microservices?
+Answer:
+A Circuit Breaker is a design pattern used to detect failures and prevent the system from repeatedly calling a failing service, allowing it time to recover.
+
+When a threshold of failures is reached, the circuit "opens" and further calls are blocked.
+
+After a cool-down period, it enters a "half-open" state to test the downstream service.
+
+2. What are the states of a Circuit Breaker?
+Answer:
+
+Closed: Calls flow normally.
+
+Open: Calls are blocked (fallback is used).
+
+Half-Open: Limited calls are allowed to check if the service has recovered.
 
 
-
+Explain with a Use Case
+“In one of my projects, I integrated Resilience4j with a FeignClient for a loan verification service.
+We defined a circuit breaker to avoid retrying when the downstream credit-check system was slow or down. 
+This improved system stability and user experienc
 
 -------------------------------------------------------------------------------------------------------
 Core Java
@@ -2465,12 +2490,139 @@ What annotations have you used in your project?
 ------------------------------------------------------------------------------------
 
 
+Agile Methodology
+
+Agile is a set of practices that define how software development is conducted, emphasizing customer feedback and adaptability.
+-----------------------------
+
+Sprint
+
+A sprint is a time interval (usually 2-3 weeks) where a specific amount of work is completed
+---------------------------------------
+
+Sprint Planning Meeting
+
+This meeting defines what will be delivered in the upcoming sprint, involving all team members.
+
+---------------------------------------------
+PI Planning
+
+Program Increment (PI) Planning is larger than sprint planning, typically spanning a quarter with broader team involvement.
+------------------------------------------------------
+Daily Stand-up Meeting
+
+A daily meeting to share updates, discuss tasks, and resolve doubts, led by a Scrum Master.
 
 
+-----------------------------------------------------
+
+Sprint Retrospective
+
+At the end of a sprint, teams discuss what went well and what needs improvement to enhance future sprints.
+
+----------------------------------------------------------------------
+
+Story Points
+
+A method to estimate the time required for tasks, with points reflecting effort or duration (e.g., a story can equal a day).
+
+--------------------------------------------------------------------------
+Epic and Spike
+
+An Epic is a large task divided into smaller stories, while a Spike is for uncertain requirements needing research.
+--------------------------------------------------------------------------------------------------------------
 
 
+core functional interfaces in Java
+
+✅ 1. Predicate<T>
+
+Definition:
+Represents a function that takes one argument and returns a boolean result (true/false).
+
+Predicate<String> isLong = s-> s.length() > 5;
+
+Systew.out.println(isLong.test("elephant")); // true
+
+2. BiPredicate<T, U>
+
+Definition:
+Takes two arguments and returns a boolean result.
+
+BiPredicate<String, Integer> isLongerThan = (s, n) -> s.length() > n;
+System.out.println(isLongerThan.test("hello", 3)); // true
+
+3. Function<T, R>
 
 
+Definition:
+Takes an argument of type T and returns a result of type R.
+
+Example:
+Function<String, Integer> length = s -> s.length();
+System.out.println(length.apply("Java")); // 4
+
+
+4. BiFunction<T, U, R>
+Definition:
+Takes two arguments and returns a result
+
+BiFunction<Integer, Integer, String> sumToString = (a, b) -> String.valueOf(a + b);
+System.out.println(sumToString.apply(2, 3)); 
+
+5. UnaryOperator<T>
+Definition:
+A specialization of Function<T, T>; input and output are of the same type.
+
+
+UnaryOperator<Integer> square = x -> x * x;
+System.out.println(square.apply(5)); // 25
+
+
+6. BinaryOperator<T>
+
+Definition:
+A specialization of BiFunction<T, T, T>; both inputs and the output are of the same type.
+
+
+BinaryOperator<Integer> add = (a, b) -> a + b;
+System.out.println(add.apply(3, 4)); // 7
+
+
+7. Consumer<T>
+Definition:
+Represents an operation that takes one argument and returns no result.
+
+
+Consumer<String> greet = name -> System.out.println("Hello, " + name);
+greet.accept("Alice"); // Hello
+
+8. BiConsumer<T, U>
+Definition:
+Takes two arguments and performs an action, without returning a result.
+
+
+BiConsumer<String, Integer> printInfo = (name, age) ->
+    System.out.println(name + " is " + age + " years old");
+printInfo.accept("Bob", 25); // Bob is 25 years old
+
+
+9. Supplier<T>
+Definition:
+Provides a result of type T; takes no arguments.
+
+
+Supplier<Double> getRandom = () -> Math.random();
+System.out.println(getRandom.get()); // e.g., 0.7856
+
+
+10. Primitive Variants (Example: IntPredicate)
+Definition:
+Like Predicate, but for primitive types to avoid boxing.
+
+
+IntPredicate isEven = x -> x % 2 == 0;
+System.out.println(isEven.test(4)); // true
 
 
 

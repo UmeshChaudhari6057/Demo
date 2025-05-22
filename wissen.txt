@@ -103,3 +103,29 @@ restapis anotaion - get post put
 statecode
 mapping database design
 
+==================================================================================================================
+
+long count = names.stream().count();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
