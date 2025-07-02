@@ -1,0 +1,137 @@
+1) explain java 8 features
+2) write a program to get first duplicate
+3) what is requestparem and queryparem nd pathvariable
+4) what is design patterns and which designpartern used in your project
+5) how you will handle exceptions in your project and write a globel exceptions
+6) what is mongo db and difference between oracle and mongo
+7) how to write validations in your project
+8) what is circuit breaker design patterns and how you will implement your project
+9) public class Test4{
+public static void main(String[] args) {
+Runnable task = () -> {
+int counter = 0;
+// Simulate some work by incrementing the counter
+for (int i = 0; i < 5; i++) {
+counter++;
+// Each thread prints its own counter value
+System.out.println("Thread " + Thread.currentThread().getName() + " counter: " + counter);
+}
+};
+// Create two threads executing the same task
+Thread thread1 = new Thread(task, "Thread-1");
+Thread thread2 = new Thread(task, "Thread-2");
+thread1.start();
+thread2.start();
+ 
+ 
+}
+}
+ 
+ 
+10)public class TryCatchFinallyExample {
+		 public static void main(String[] args) {
+		 try {
+		 System.out.println("Inside try block");
+		 int result = 10 / 0;
+		 System.out.println("End of try block");
+		 } catch (Exception e) {
+		 System.out.println("Inside catch block");
+		 } finally {
+		 System.out.println("Inside finally block");
+		 }
+		 }
+		}
+ 
+ 
+11) write a query to fetch 10k to 40k salry range
+12) what is gateway
+13) which db you are using and how you config
+14) how many ways to get the response data in spring boot
+15) what is jpa and what is the use
+16) can we extends two functional interfaces
+17) tell difference betweek callable and runnable
+18) tell default functional interfaces in java8
+19) explain api standards
+20) what are the tools and technologies used in your project how you will check code quality and coder coverage
+21) how to write the junit for the exceptions
+22) concurrent hashmap nd how to implement
+23) which framework used in your project
+24) what is kafka topic and explain kafka flow
+25) what is default server in spring boot and how you will add external server
+26) how you will config the multiple dbs in spring boot
+27) what is static and default in java 8 where will use in realtime
+28) explain internal working of hashmap
+29) what is @config and @SpringBootApplication and what are the annotations is added
+30) how to register the apis in root
+31) in your project what are the tools and tech used for deployment and did you know container how to create
+32) explain all status codes
+33) What is a microservices architecture, and what are its benefits?
+ 
+34) How do microservices communicate with each other? Explain synchronous and asynchronous communication.
+ 
+35). What are the challenges associated with distributed systems and microservices architecture?
+ 
+36) How do you ensure data consistency across microservices?
+ 
+37) What is service discovery, and how is it implemented in a microservices environment?
+ 
+38) Explain the concept of API gateways in microservices architecture. How do they help?
+ 
+39) What is circuit breaking, and why is it important in microservices architecture?
+ 
+40) How do you monitor and manage microservices in production?
+ 
+41) What are the common security concerns in microservices architecture? How do you address them?
+ 
+42) What is the role of containers and container orchestration platforms like Docker and Kubernetes in microservices deployment?
+43) what is volatile and synchronized?
+44) what is idempotency ? how you will handle
+45) securing apis using jwt and oath2
+46) validating incoming payloads with annotations
+47)
+ 
+ 
+//
+ 
+1.java features
+2.what is synchronized block ?
+3.use of transient keyword
+4.difference between string buffer and string
+5.arr = { -1, -1, 6, 1, 9, 3, 2, -1, 4, -1 } place this array in their respective index loctions
+6.get the third highest salary sql query
+7.hash map and hashset
+8.use of threads
+9.lifecycle of thread
+10.write an example of polymorphism
+HSBC
+What is functional interface in java 8 and where you used in your project
+What is Streams and types of streams and use
+Difference between FlatMap and Map in java 8
+Difference between == and equals
+Difference between Interface and Abstraction
+What is Caching in Spring boot and how does implementing in your project
+What is load balancing and how does implementing in your project
+What is circuit breaker and how does implementation in your project
+How you are creating the custom exception in your project
+Difference between Monolithic and Microservices
+What is Concurrency and how you will handle your project
+How you verify when a service is down or up and how you will handle your project
+How to config the profiles
+What is Default and static methods in java 8
+Morgan
+Difference between String buffer and String builder and String
+How you prove String is immutable
+Types of Streams
+Difference between FlatMap and Map in java8
+Difference between == and eqals
+public class Person {
+private String name;
+private int age;
+public Person(String name, int age) {
+this.name = name;
+this.age = age;
+}
+}
+Person p1 = new Person("Ram", 25);
+Person p2 = new Person("Ram", 25);
+p1==p2;
